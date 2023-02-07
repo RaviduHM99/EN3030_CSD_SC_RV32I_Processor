@@ -37,6 +37,13 @@ module Register_File(
     assign READ_Data_2 = REG_File[READ_Addr_2];
     assign REG_File[0] = 32'd0;
     
+    initial begin
+        for (integer k=1; k<32; k++) 
+        begin
+            REG_File[k] <= 32'd0;
+        end
+    end
+    
     always @(posedge Reg_WRITE or posedge reset) 
     begin
         if (reset==1'b1)

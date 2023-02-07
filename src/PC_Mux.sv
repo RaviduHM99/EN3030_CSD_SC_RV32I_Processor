@@ -21,16 +21,18 @@
 
 
 module PC_Mux(
-    input logic PC_Sel,
+    input logic [1:0] PC_Sel,
     input logic [31:0] PC_4,
     input logic [31:0] PC_Imm,
+    input logic [31:0] ALU_JALR,
     output logic [31:0] PC_IN
     );
     
     always_comb begin
         unique case(PC_Sel)
-            1'b0 : PC_IN = PC_4;
-            1'b1 : PC_IN = PC_Imm;
+            2'b00 : PC_IN = PC_4;
+            2'b01 : PC_IN = PC_Imm;
+            2'b10 : PC_IN = {ALU_JALR[31:1],1'b0};
         endcase
     end
 endmodule

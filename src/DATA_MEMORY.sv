@@ -24,7 +24,7 @@ module DATA_MEMORY(
   input logic [31:0] address,
   input logic [31:0] write_data,
   input logic write_enable,
-  input logic [1:0] mem_type, // byte, halfword, word and signed, unsigned
+  input logic [2:0] mem_type, // byte, halfword, word and signed, unsigned
   input logic read_enable,
   output logic [31:0] read_data
 );
@@ -58,8 +58,8 @@ module DATA_MEMORY(
         3'b000 : read_data = 32'(signed'(mem[address])); //byte
         3'b100 : read_data = 32'(unsigned'(mem[address])); //unsigned byte
         3'b001 : read_data = 32'(signed'({mem[address + 1], mem[address]})); //halfword
-        3'b100 : read_data = 32'(unsigned'({mem[address + 1], mem[address]})); //unsigned halfword
-        3'b010 : read_data = 32'(signed'({mem[address + 3], mem[address + 2], mem[address + 1], mem[address]})); //halfword
+        3'b110 : read_data = 32'(unsigned'({mem[address + 1], mem[address]})); //unsigned halfword
+        3'b010 : read_data = 32'(signed'({mem[address + 3], mem[address + 2], mem[address + 1], mem[address]})); //word
         default: read_data = 32'(signed'(mem[address]));
     endcase
   end

@@ -23,12 +23,8 @@
 module Reg_File_Input(
     input logic [4:0] Reg_Addr_1,
     input logic [4:0] Reg_Addr_2,
-    input logic [31:0] PC,
-    input logic [31:0] WRITE_Data_IN,
     input logic REG_READ_Ctrl_1,
     input logic REG_READ_Ctrl_2,
-    input logic REG_WRITE_Ctrl,
-    output logic [31:0] WRITE_Data,
     output logic [31:0] READ_Addr_1,
     output logic [31:0] READ_Addr_2
     );
@@ -47,11 +43,5 @@ module Reg_File_Input(
         endcase
     end
     
-    always_comb begin
-        unique case(REG_WRITE_Ctrl)
-            1'd1 : WRITE_Data = PC; //Here PC means PC+4
-            1'd0 : WRITE_Data = WRITE_Data_IN; 
-        endcase
-    end
     
 endmodule

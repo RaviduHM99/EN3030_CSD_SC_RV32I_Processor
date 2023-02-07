@@ -75,6 +75,7 @@ module ALU_CU(
                   4'b0111 : ALUops = 4'd12; //AND
              endcase
             end
+          default: ALUops = 4'd15;
         endcase
     end
 

@@ -26,7 +26,7 @@ module Program_Counter(
     input logic [31:0] PC_in,
     output logic [31:0] PC_out
     );
-
+      
     always_ff @ (posedge pc_clk or posedge reset)
     begin
         if(reset == 1'b1)
