@@ -1,0 +1,453 @@
+Analysis & Synthesis report for RV32I_SC
+Sun Feb 12 15:35:46 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: clk_divider:cd_dut
+ 12. Port Connectivity Checks: "RISCV_Processor:RV32I_Core|INST_MEMORY:INS_MEM"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Feb 12 15:35:46 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; RV32I_SC                                   ;
+; Top-level Entity Name              ; FPGA_Module                                ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 4,356                                      ;
+;     Total combinational functions  ; 3,371                                      ;
+;     Dedicated logic registers      ; 1,206                                      ;
+; Total registers                    ; 1206                                       ;
+; Total pins                         ; 59                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; FPGA_Module        ; RV32I_SC           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; src/segment7.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/segment7.sv             ;         ;
+; src/clk_divider.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/clk_divider.sv          ;         ;
+; src/SEGMENT_7_INTERFACE.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/SEGMENT_7_INTERFACE.sv  ;         ;
+; src/Processor_Out_Mux.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Processor_Out_Mux.sv    ;         ;
+; src/FPGA_Module.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/FPGA_Module.sv          ;         ;
+; src/PC_Mux.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/PC_Mux.sv               ;         ;
+; src/Branch_Logic_Unit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Branch_Logic_Unit.sv    ;         ;
+; src/PC_Inc.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/PC_Inc.sv               ;         ;
+; src/Reg_File_Input.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Reg_File_Input.sv       ;         ;
+; src/ALU_InMux.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/ALU_InMux.sv            ;         ;
+; src/Immediate_Generation.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Immediate_Generation.sv ;         ;
+; src/Register_File.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Register_File.sv        ;         ;
+; src/Program_Counter.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Program_Counter.sv      ;         ;
+; src/ALU_OutMux.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/ALU_OutMux.sv           ;         ;
+; src/ALU_CU.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/ALU_CU.sv               ;         ;
+; src/DATA_MEMORY.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/DATA_MEMORY.sv          ;         ;
+; src/RISCV_Processor.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/RISCV_Processor.sv      ;         ;
+; src/ALU.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/ALU.sv                  ;         ;
+; src/Control_FSM.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/Control_FSM.sv          ;         ;
+; src/INST_MEMORY.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/src/INST_MEMORY.sv          ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 4,356                        ;
+;                                             ;                              ;
+; Total combinational functions               ; 3371                         ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 2612                         ;
+;     -- 3 input functions                    ; 654                          ;
+;     -- <=2 input functions                  ; 105                          ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 3191                         ;
+;     -- arithmetic mode                      ; 180                          ;
+;                                             ;                              ;
+; Total registers                             ; 1206                         ;
+;     -- Dedicated logic registers            ; 1206                         ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 59                           ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+; Maximum fan-out node                        ; clk_divider:cd_dut|clock_out ;
+; Maximum fan-out                             ; 1177                         ;
+; Total fan-out                               ; 17541                        ;
+; Average fan-out                             ; 3.74                         ;
++---------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; |FPGA_Module                     ; 3371 (0)          ; 1206 (0)     ; 0           ; 0            ; 0       ; 0         ; 59   ; 0            ; |FPGA_Module                                                    ; work         ;
+;    |Processor_Out_Mux:POM_dut|   ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|Processor_Out_Mux:POM_dut                          ; work         ;
+;    |RISCV_Processor:RV32I_Core|  ; 3241 (0)          ; 1177 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core                         ; work         ;
+;       |ALU:ALU_dut|              ; 594 (594)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut             ; work         ;
+;       |ALU_CU:ALUCU|             ; 31 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_CU:ALUCU            ; work         ;
+;       |ALU_InMux:ALU_IN_dut|     ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_InMux:ALU_IN_dut    ; work         ;
+;       |ALU_OutMux:ALU_Out|       ; 240 (240)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_OutMux:ALU_Out      ; work         ;
+;       |Branch_Logic_Unit:BLU|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|Branch_Logic_Unit:BLU   ; work         ;
+;       |Control_FSM:CFSM|         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|Control_FSM:CFSM        ; work         ;
+;       |DATA_MEMORY:DM|           ; 511 (511)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM          ; work         ;
+;       |INST_MEMORY:INS_MEM|      ; 217 (217)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|INST_MEMORY:INS_MEM     ; work         ;
+;       |Immediate_Generation:IG|  ; 73 (73)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|Immediate_Generation:IG ; work         ;
+;       |PC_Inc:PCI|               ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|PC_Inc:PCI              ; work         ;
+;       |Program_Counter:PC|       ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|Program_Counter:PC      ; work         ;
+;       |Reg_File_Input:RFI|       ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|Reg_File_Input:RFI      ; work         ;
+;       |Register_File:RF|         ; 1389 (1389)       ; 1017 (1017)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|RISCV_Processor:RV32I_Core|Register_File:RF        ; work         ;
+;    |SEGMENT_7_INTERFACE:SEG_dut| ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut                        ; work         ;
+;       |segment7:segment7_0|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_0    ; work         ;
+;       |segment7:segment7_1|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_1    ; work         ;
+;       |segment7:segment7_2|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_2    ; work         ;
+;       |segment7:segment7_3|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_3    ; work         ;
+;       |segment7:segment7_4|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_4    ; work         ;
+;       |segment7:segment7_5|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_5    ; work         ;
+;       |segment7:segment7_6|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_6    ; work         ;
+;       |segment7:segment7_7|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_7    ; work         ;
+;    |clk_divider:cd_dut|          ; 42 (42)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Module|clk_divider:cd_dut                                 ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++------------------------------------------------------------+----------------------------------------+
+; Register name                                              ; Reason for Removal                     ;
++------------------------------------------------------------+----------------------------------------+
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][6] ; Stuck at GND due to stuck port data_in ;
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][5] ; Stuck at GND due to stuck port data_in ;
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][4] ; Stuck at GND due to stuck port data_in ;
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][3] ; Stuck at GND due to stuck port data_in ;
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][2] ; Stuck at GND due to stuck port data_in ;
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][1] ; Stuck at GND due to stuck port data_in ;
+; RISCV_Processor:RV32I_Core|Register_File:RF|REG_File[0][0] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7                      ;                                        ;
++------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1206  ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 47    ;
+; Number of registers using Asynchronous Clear ; 1129  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1145  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|Program_Counter:PC|PC_out[6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[1][2]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[2][6]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[15][0]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[14][0]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[13][7]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[12][1]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[11][7]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[10][0]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[9][2]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[8][0]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[7][0]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[6][0]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[5][2]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[4][4]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|mem[3][1]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|Mux130         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|Immediate_Generation:IG|Mux16 ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|Immediate_Generation:IG|Mux0  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|Register_File:RF|Mux36        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|Immediate_Generation:IG|Mux26 ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|Immediate_Generation:IG|Mux25 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|Register_File:RF|Mux15        ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_OutMux:ALU_Out|Mux26      ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_OutMux:ALU_Out|Mux7       ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_OutMux:ALU_Out|Mux13      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|DATA_MEMORY:DM|Mux134         ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 72 LEs               ; 32 LEs                 ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux19             ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 72 LEs               ; 32 LEs                 ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux11             ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU_OutMux:ALU_Out|Mux21      ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux24             ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux7              ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 22 LEs               ; 6 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux28             ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux2              ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 22 LEs               ; 8 LEs                  ; No         ; |FPGA_Module|RISCV_Processor:RV32I_Core|ALU:ALU_dut|Mux1              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_divider:cd_dut ;
++----------------+------------------------------+-----------------+
+; Parameter Name ; Value                        ; Type            ;
++----------------+------------------------------+-----------------+
+; DIVISOR        ; 0010111110101111000010000000 ; Unsigned Binary ;
++----------------+------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RISCV_Processor:RV32I_Core|INST_MEMORY:INS_MEM"                                                                                                     ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Address ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Address[31..7]" will be connected to GND. ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:32     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Feb 12 15:35:10 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RV32I_SC -c RV32I_SC
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file src/segment7.sv
+    Info (12023): Found entity 1: segment7
+Info (12021): Found 1 design units, including 1 entities, in source file src/clk_divider.sv
+    Info (12023): Found entity 1: clk_divider
+Info (12021): Found 1 design units, including 1 entities, in source file src/segment_7_interface.sv
+    Info (12023): Found entity 1: SEGMENT_7_INTERFACE
+Info (12021): Found 1 design units, including 1 entities, in source file src/processor_out_mux.sv
+    Info (12023): Found entity 1: Processor_Out_Mux
+Info (12021): Found 1 design units, including 1 entities, in source file src/fpga_module.sv
+    Info (12023): Found entity 1: FPGA_Module
+Info (12021): Found 1 design units, including 1 entities, in source file src/pc_mux.sv
+    Info (12023): Found entity 1: PC_Mux
+Info (12021): Found 1 design units, including 1 entities, in source file src/branch_logic_unit.sv
+    Info (12023): Found entity 1: Branch_Logic_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file src/pc_inc.sv
+    Info (12023): Found entity 1: PC_Inc
+Info (12021): Found 1 design units, including 1 entities, in source file src/reg_file_input.sv
+    Info (12023): Found entity 1: Reg_File_Input
+Info (12021): Found 1 design units, including 1 entities, in source file src/alu_inmux.sv
+    Info (12023): Found entity 1: ALU_InMux
+Info (12021): Found 1 design units, including 1 entities, in source file src/immediate_generation.sv
+    Info (12023): Found entity 1: Immediate_Generation
+Info (12021): Found 1 design units, including 1 entities, in source file src/register_file.sv
+    Info (12023): Found entity 1: Register_File
+Info (12021): Found 1 design units, including 1 entities, in source file src/program_counter.sv
+    Info (12023): Found entity 1: Program_Counter
+Info (12021): Found 1 design units, including 1 entities, in source file src/alu_outmux.sv
+    Info (12023): Found entity 1: ALU_OutMux
+Info (12021): Found 1 design units, including 1 entities, in source file src/alu_cu.sv
+    Info (12023): Found entity 1: ALU_CU
+Info (12021): Found 1 design units, including 1 entities, in source file src/data_memory.sv
+    Info (12023): Found entity 1: DATA_MEMORY
+Info (12021): Found 1 design units, including 1 entities, in source file src/riscv_processor.sv
+    Info (12023): Found entity 1: RISCV_Processor
+Info (12021): Found 1 design units, including 1 entities, in source file src/alu.sv
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file src/control_fsm.sv
+    Info (12023): Found entity 1: Control_FSM
+Info (12021): Found 1 design units, including 1 entities, in source file src/inst_memory.sv
+    Info (12023): Found entity 1: INST_MEMORY
+Info (12127): Elaborating entity "FPGA_Module" for the top level hierarchy
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:cd_dut"
+Info (12128): Elaborating entity "RISCV_Processor" for hierarchy "RISCV_Processor:RV32I_Core"
+Info (12128): Elaborating entity "Program_Counter" for hierarchy "RISCV_Processor:RV32I_Core|Program_Counter:PC"
+Info (12128): Elaborating entity "INST_MEMORY" for hierarchy "RISCV_Processor:RV32I_Core|INST_MEMORY:INS_MEM"
+Info (12128): Elaborating entity "Reg_File_Input" for hierarchy "RISCV_Processor:RV32I_Core|Reg_File_Input:RFI"
+Info (12128): Elaborating entity "Register_File" for hierarchy "RISCV_Processor:RV32I_Core|Register_File:RF"
+Info (12128): Elaborating entity "Immediate_Generation" for hierarchy "RISCV_Processor:RV32I_Core|Immediate_Generation:IG"
+Info (12128): Elaborating entity "ALU_CU" for hierarchy "RISCV_Processor:RV32I_Core|ALU_CU:ALUCU"
+Warning (10958): SystemVerilog warning at ALU_CU.sv(51): unique or priority keyword makes case statement complete
+Warning (10958): SystemVerilog warning at ALU_CU.sv(61): unique or priority keyword makes case statement complete
+Info (12128): Elaborating entity "ALU_InMux" for hierarchy "RISCV_Processor:RV32I_Core|ALU_InMux:ALU_IN_dut"
+Info (12128): Elaborating entity "PC_Inc" for hierarchy "RISCV_Processor:RV32I_Core|PC_Inc:PCI"
+Info (12128): Elaborating entity "ALU" for hierarchy "RISCV_Processor:RV32I_Core|ALU:ALU_dut"
+Info (12128): Elaborating entity "Branch_Logic_Unit" for hierarchy "RISCV_Processor:RV32I_Core|Branch_Logic_Unit:BLU"
+Info (12128): Elaborating entity "PC_Mux" for hierarchy "RISCV_Processor:RV32I_Core|PC_Mux:PCM"
+Warning (10958): SystemVerilog warning at PC_Mux.sv(32): unique or priority keyword makes case statement complete
+Info (12128): Elaborating entity "ALU_OutMux" for hierarchy "RISCV_Processor:RV32I_Core|ALU_OutMux:ALU_Out"
+Info (12128): Elaborating entity "DATA_MEMORY" for hierarchy "RISCV_Processor:RV32I_Core|DATA_MEMORY:DM"
+Info (12128): Elaborating entity "Control_FSM" for hierarchy "RISCV_Processor:RV32I_Core|Control_FSM:CFSM"
+Warning (10230): Verilog HDL assignment warning at Control_FSM.sv(117): truncated value with size 32 to match size of target (20)
+Info (12128): Elaborating entity "Processor_Out_Mux" for hierarchy "Processor_Out_Mux:POM_dut"
+Info (12128): Elaborating entity "SEGMENT_7_INTERFACE" for hierarchy "SEGMENT_7_INTERFACE:SEG_dut"
+Info (12128): Elaborating entity "segment7" for hierarchy "SEGMENT_7_INTERFACE:SEG_dut|segment7:segment7_0"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/output_files/RV32I_SC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4463 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 4404 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Sun Feb 12 15:35:46 2023
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Altera/output_files/RV32I_SC.map.smsg.
+
+

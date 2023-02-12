@@ -1,0 +1,32 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_CU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_InMux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_InMux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_OutMux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_OutMux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Branch_Logic_Unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Logic_Unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Control_FSM.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_FSM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DATA_MEMORY
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/INST_MEMORY.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module INST_MEMORY
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Immediate_Generation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generation
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Inc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_Inc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Mux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_Mux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/RISCV_Processor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISCV_Processor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Reg_File_Input.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_File_Input
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src_tb/RISCV_Processor_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISCV_Processor_tb

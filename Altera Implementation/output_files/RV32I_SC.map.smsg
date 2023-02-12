@@ -1,0 +1,8 @@
+Warning (10273): Verilog HDL warning at Immediate_Generation.sv(44): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at ALU_OutMux.sv(20): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at ALU_CU.sv(31): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at ALU_CU.sv(74): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DATA_MEMORY.sv(73): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Control_FSM.sv(81): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Control_FSM.sv(93): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Control_FSM.sv(117): extended using "x" or "z"

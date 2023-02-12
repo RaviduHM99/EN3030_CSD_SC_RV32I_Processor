@@ -1,0 +1,24 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../src/ALU.sv" \
+"../../../../../src/ALU_CU.sv" \
+"../../../../../src/ALU_InMux.sv" \
+"../../../../../src/ALU_OutMux.sv" \
+"../../../../../src/Branch_Logic_Unit.sv" \
+"../../../../../src/Control_FSM.sv" \
+"../../../../../src/DATA_MEMORY.sv" \
+"../../../../../src/INST_MEMORY.sv" \
+"../../../../../src/Immediate_Generation.sv" \
+"../../../../../src/PC_Inc.sv" \
+"../../../../../src/PC_Mux.sv" \
+"../../../../../src/Program_Counter.sv" \
+"../../../../../src/RISCV_Processor.sv" \
+"../../../../../src/Reg_File_Input.sv" \
+"../../../../../src/Register_File.sv" \
+"../../../../../src_tb/RISCV_Processor_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

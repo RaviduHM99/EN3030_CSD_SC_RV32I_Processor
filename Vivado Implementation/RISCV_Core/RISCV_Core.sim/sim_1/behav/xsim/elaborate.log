@@ -1,0 +1,28 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1337bf94a0bf49a3872a3a2bbf5aba1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RISCV_Processor_tb_behav xil_defaultlib.RISCV_Processor_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 7 differs from formal bit length 32 for port Address [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/RISCV_Processor.sv:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.INST_MEMORY
+Compiling module xil_defaultlib.Reg_File_Input
+Compiling module xil_defaultlib.Register_File
+Compiling module xil_defaultlib.Immediate_Generation
+Compiling module xil_defaultlib.ALU_CU
+Compiling module xil_defaultlib.ALU_InMux
+Compiling module xil_defaultlib.PC_Inc
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Logic_Unit
+Compiling module xil_defaultlib.PC_Mux
+Compiling module xil_defaultlib.ALU_OutMux
+Compiling module xil_defaultlib.DATA_MEMORY
+Compiling module xil_defaultlib.Control_FSM
+Compiling module xil_defaultlib.RISCV_Processor
+Compiling module xil_defaultlib.RISCV_Processor_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot RISCV_Processor_tb_behav

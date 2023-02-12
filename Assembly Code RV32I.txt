@@ -1,0 +1,23 @@
+0 :lui x6, 7
+4 :lui x7, 1000
+8 :auipc x8, 2000
+12 :addi x9, x0, -50
+16 :sub x10, x8, x7
+20 :lui x11, 1000000
+24 :sb x9, 0(x0)
+28 :sh x7, 1(x0)
+32 :sw x11, 3(x0)
+36 :lw x12, 3(x0)
+40 :lh x13, 1(x0)
+44 :addi x14, x0, -56
+48 :sw x14, 7(x0)
+52 :lbu x15, 7(x0)
+56 :lhu x16, 7(x0)  
+60 :beq x6, x7, 8
+64 :slli x17, x7, 5
+68 :blt x6, x7, 12
+72 :and x20, x6, x7 
+76 :jalr x5, x0, 0
+80 :slt x4, x6, x7
+84 :jal x1, -12
+

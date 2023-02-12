@@ -1,0 +1,574 @@
+
+*** Running vivado
+    with args -log RISCV_Processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV_Processor.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source RISCV_Processor.tcl -notrace
+Command: synth_design -top RISCV_Processor -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9396 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 356.203 ; gain = 99.730
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'RISCV_Processor' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/RISCV_Processor.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Program_Counter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (1#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Program_Counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'INST_MEMORY' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/INST_MEMORY.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'INST_MEMORY' (2#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/INST_MEMORY.sv:23]
+WARNING: [Synth 8-689] width (7) of port connection 'Address' does not match port width (32) of module 'INST_MEMORY' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/RISCV_Processor.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'Reg_File_Input' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Reg_File_Input.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_File_Input' (3#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Reg_File_Input.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Register_File.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (4#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Register_File.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Immediate_Generation' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Immediate_Generation.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Immediate_Generation.sv:30]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Immediate_Generation.sv:37]
+INFO: [Synth 8-6155] done synthesizing module 'Immediate_Generation' (5#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Immediate_Generation.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_CU' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:30]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:34]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:43]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:51]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:61]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_CU' (6#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_CU.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_InMux' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_InMux.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_InMux' (7#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_InMux.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_Inc' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Inc.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC_Inc' (8#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Inc.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU.sv:33]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU.sv:50]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (9#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Logic_Unit' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Branch_Logic_Unit.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Branch_Logic_Unit.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Logic_Unit' (10#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Branch_Logic_Unit.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_Mux' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Mux.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Mux.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'PC_Mux' (11#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/PC_Mux.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_OutMux' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_OutMux.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_OutMux.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_OutMux' (12#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/ALU_OutMux.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DATA_MEMORY' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:51]
+WARNING: [Synth 8-5788] Register mem_reg[15] in module DATA_MEMORY is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:47]
+WARNING: [Synth 8-5788] Register mem_reg[14] in module DATA_MEMORY is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:47]
+WARNING: [Synth 8-5788] Register mem_reg[13] in module DATA_MEMORY is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:47]
+WARNING: [Synth 8-5788] Register mem_reg[12] in module DATA_MEMORY is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:47]
+WARNING: [Synth 8-5788] Register mem_reg[11] in module DATA_MEMORY is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:47]
+WARNING: [Synth 8-5788] Register mem_reg[10] in module DATA_MEMORY is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'DATA_MEMORY' (13#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/DATA_MEMORY.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Control_FSM' [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Control_FSM.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Control_FSM.sv:75]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Control_FSM.sv:89]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Control_FSM.sv:100]
+INFO: [Synth 8-6155] done synthesizing module 'Control_FSM' (14#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/Control_FSM.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_Processor' (15#1) [C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/src/RISCV_Processor.sv:23]
+WARNING: [Synth 8-3331] design PC_Mux has unconnected port ALU_JALR[0]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[6]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[5]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[4]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[3]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[2]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[1]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[0]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[31]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[30]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[29]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[28]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[27]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[26]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[25]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[24]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[23]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[22]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[21]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[20]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[19]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[18]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[17]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[16]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[15]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[14]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[13]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[12]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[11]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[10]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[9]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[8]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[7]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 410.742 ; gain = 154.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 410.742 ; gain = 154.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 410.742 ; gain = 154.270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_File_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "mem_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "mem_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mem_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 445.379 ; gain = 188.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
+	                8 Bit    Registers := 16    
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	 129 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 50    
+	   4 Input      8 Bit        Muxes := 15    
+	   3 Input      8 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 113   
+	   4 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 6     
+	  10 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Program_Counter 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module INST_MEMORY 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Muxes : 
+	 129 Input      8 Bit        Muxes := 4     
+Module Reg_File_Input 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+Module Register_File 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module Immediate_Generation 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+Module ALU_CU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module ALU_InMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module PC_Inc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Branch_Logic_Unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module PC_Mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module DATA_MEMORY 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 16    
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 50    
+	   4 Input      8 Bit        Muxes := 15    
+	   3 Input      8 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 80    
+	   4 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 6     
+Module Control_FSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	  10 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "mem_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mem_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design PC_Mux has unconnected port ALU_JALR[0]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[6]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[5]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[4]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[3]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[2]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[1]
+WARNING: [Synth 8-3331] design Immediate_Generation has unconnected port INST[0]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[31]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[30]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[29]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[28]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[27]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[26]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[25]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[24]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[23]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[22]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[21]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[20]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[19]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[18]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[17]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[16]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[15]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[14]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[13]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[12]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[11]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[10]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[9]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[8]
+WARNING: [Synth 8-3331] design INST_MEMORY has unconnected port Address[7]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:18 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:54 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:02:27 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:55 ; elapsed = 00:02:29 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:55 ; elapsed = 00:02:29 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:55 ; elapsed = 00:02:29 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:02:30 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:56 ; elapsed = 00:02:30 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:56 ; elapsed = 00:02:30 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    42|
+|3     |LUT1   |     4|
+|4     |LUT2   |   131|
+|5     |LUT3   |   170|
+|6     |LUT4   |   111|
+|7     |LUT5   |   180|
+|8     |LUT6   |  1428|
+|9     |MUXF7  |   331|
+|10    |MUXF8  |    86|
+|11    |FDCE   |  1136|
+|12    |FDRE   |    48|
+|13    |IBUF   |     2|
+|14    |OBUF   |    64|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------+----------------+------+
+|      |Instance     |Module          |Cells |
++------+-------------+----------------+------+
+|1     |top          |                |  3734|
+|2     |  DM         |DATA_MEMORY     |   359|
+|3     |  ALU_IN_dut |ALU_InMux       |    24|
+|4     |  ALU_Out    |ALU_OutMux      |    87|
+|5     |  PC         |Program_Counter |   894|
+|6     |  PCM        |PC_Mux          |    32|
+|7     |  RF         |Register_File   |  2271|
++------+-------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:56 ; elapsed = 00:02:30 . Memory (MB): peak = 647.234 ; gain = 390.762
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 73 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:56 ; elapsed = 00:02:30 . Memory (MB): peak = 647.234 ; gain = 390.762
+Synthesis Optimization Complete : Time (s): cpu = 00:01:56 ; elapsed = 00:02:30 . Memory (MB): peak = 647.234 ; gain = 390.762
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 461 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+171 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:39 . Memory (MB): peak = 699.098 ; gain = 455.379
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/RISCV_Core/RISCV_Core.runs/synth_1/RISCV_Processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RISCV_Processor_utilization_synth.rpt -pb RISCV_Processor_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 699.098 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 12 16:00:47 2023...

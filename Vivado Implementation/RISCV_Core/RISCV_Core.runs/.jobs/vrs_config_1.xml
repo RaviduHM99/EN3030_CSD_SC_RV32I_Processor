@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_1" LaunchDir="C:/Users/User/Downloads/Documents/ACA/Sem 5/EN3030 Circuits and Systems Design/Vivado/RISCV_Core/RISCV_Core.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
